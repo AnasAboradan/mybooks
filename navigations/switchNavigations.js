@@ -8,6 +8,7 @@ import Tabnavigation from '../navigations/tabnavigation';
 
 import SearchScreen from '../screens/homeScreens/searchScreen';
 import FilterScreen from '../screens/homeScreens/filterScreen';
+import Bookdetalies from '../screens/homeScreens/bookdetalis'
 
 import MessageScreen from '../screens/chatScreeens/message';
 
@@ -36,7 +37,15 @@ const [userId,SetUserId]=useState('');
      
       <RootStack.Screen name="SearchScreen" component={SearchScreen}/>
       <RootStack.Screen name="FilterScreen" component={FilterScreen}/>
-
+      <RootStack.Screen name="Bookdetalies" component={Bookdetalies}
+      options={({route})=>({
+        headerBackTitleVisible:false,
+        headerTitle:false,
+        headerTransparent:true,
+        headerTintColor:'#fff'
+      })
+        
+      }/>
       <RootStack.Screen name="MessageScreen" component={MessageScreen}/>
       
      
